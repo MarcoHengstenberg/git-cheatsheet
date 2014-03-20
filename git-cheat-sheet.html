@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<title>Smashing Git - A Course And Cheat-Sheet</title>
+
+	<link href="css/git-cheat-sheet.css" rel="stylesheet" />
+
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	<link rel="icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body id="top">
+	<header role="banner">
+		<h1>
+			<img src="img/smashing-magazine-s.png" alt="Smashing Magazine" class="small" />
+			<img src="img/smashing-magazine-logo.png" alt="Smashing Magazine" class="large" />
+		</h1>
+		<h2>Smashing Git Cheat Sheet</h2>
+	</header>
+
+	<main role="main">
+		<section class="content">
+			<article class="introduction">
+				<h3>An Explanation</h3>
+
+				<p>This Cheatsheet should help you getting started with Github and on how to use it the <strong>right</strong> way.</p>
+
+				<p class="thought">Where one may argue, that there's never only one right way, for Git this is true as well but... yeah, you knew that <strong>but</strong> would come, right?</p>
+
+				<p>Of course there is more than one way to work with Git. You can use the Command Line, there are a few <abbr title="Graphic User Interface">GUI</abbr>-Applications you can <a href="http://git-scm.com/downloads/guis">download</a> (some are free, some not. I'd recommend trying a free one first) and if nothing else you can go right to <a href="http://github.com">Github</a> and work it from there.</p>
+
+				<p>With that being said, let's dive in together, shall we?</p>
+			</article> <!-- End of Introduction -->
+			<article class="table-of-contents">
+				<h3>What we are going to learn today</h3>
+
+				<ol class="toc">
+					<li><a href="#1">Why Git</a></li>
+					<li><a href="#2">The Right Way</a></li>
+					<li><a href="#3">Your First Commands</a></li>
+					<li><a href="#4">Down The Rabbit Hole</a></li>
+					<li><a href="#5">The Pusher</a></li>
+					<li><a href="#6">tl;dr</a></li>
+					<li><a href="#7">Credits</a></li>
+				</ol>
+			</article> <!-- End of Table of Contents -->
+
+			<article id="1">
+				<h3>Why Git</h3>
+
+				<p>Git is cool when you are developing. Whether it is a website or an application or some piece of software or even this cheatsheet your are reading, now. You could write books with versioning or keep your favorite recipies at some repository (from now on: repo).</p>
+
+				<p>Why is it cool? Because you will never lose any data while developing your whatever and if something goes wrong you can simply take a step back to your last working version and go on from there or start over completely at any time.</p>
+
+				<p>If you're still not convinced: with Git you can add some change to your stuff locally, commit it with a single command to your repo at Github and automatically push those changes to your server. Smells like large amounts of <strong>WIN</strong>, doesn't it.</p>
+			</article>
+			<article id="2">
+				<h3>The Right Way</h3>
+
+				<p>Using Git the right way, would be using Git with Terminal or if you want to call it like that "The Command Line Tool".</p>
+
+				<p>Now, what can we do with Git and Terminal? We can clone an existing remote repo at Git to your computer, (we could also create a completely new one on your computer,) we can look for changes you applied, we can stage those changes, we can then commit them with a short message and finally push them to the repo at Git.</p>
+
+				<p>Those are the basic tools you are going to need, when working with our repos at Git and on your computer. While you might feel intimidated when using the Terminal for the first time, as you've been told that great evil can occur by doing so, I can assure you that those people did not lie to you.</p>
+
+				<p class="thought"><strong>"With great power comes great responsibility!"</strong> This is a quote by Uncle Ben from the movie Spiderman and boy is he right.</p>
+
+				<p>You could, when prompting the wrong command (or the right one, that depends on the way you look at it), easily erase all files from your hard-drive or even better from any exisiting web-server you have access to.<p>
+
+				<p>Yet, I won't tell you the command and you will not look for it. Deal? Deal! And promise me to not take commands by "some dude on stackoverflow" and copypaste them to your Terminal. Okay? Thank you.</p>
+
+				<p>Well, then I suppose we're safe from doing such terrible things and move on to the very nice stuff Terminal comes with.</p>
+			</article>
+			<article id="3">
+				<h3>Your First Commands</h3>
+
+				<p>To give you an easy start, we are going to create a directory, move into it and then clone an existing repository from the Smashing Accont at Git. Shall we? We shall! I can already feel your excitement.</p>
+
+				<p>Let's create a folder on your computer by typing:</p>
+
+				<p><pre class="language-bash"><code>mkdir my-git-directory</code></pre></p>
+
+				<p>You may then hit enter. <code class="langauge-bash">mkdir</code> means nothing else than "Please, dear Terminal, create a directory". <strong>Important!</strong> Name this folder anything you want but please: NO SPACES! The internet is not playing nicely when it comes to <a href="https://www.google.de/webhp?tab=ww&ei=dJQEU5e3KqLW4AT0_ICwBQ&ved=0CBQQ1S4#q=why+directory+names+should+not+contain+spaces">spaces</a>.</p>
+
+				<p>We have a folder! We want to go in there! Terminal to the rescue:</p>
+
+				<p><pre class="language-bash"><code>cd my-git-directory</code></pre></p>
+
+				<p>And again hit enter, please. At that point you might wonder why noone is telling you:"Good job!" or "Directory created." or "We successfully moved into that folder.". Terminal will only tell you, if something goes wrong. How sweet. Try:</p>
+
+				<p><pre class="language-bash"><code>cd whatever</code></pre></p>
+
+				<p>Now, that you are inside <strong>my-git-directory</strong>, which should be empty at this point in time you will be prompted with an error.</p>
+
+				<p>Error? Error! Good thing. We are up to fill this folder with precious stuff in a breeze.</p>
+
+				<p><pre class="language-bash"><code>cd</code></pre></p>
+
+				<p>means nothing else but <strong>change directory</strong>.</p>
+
+				<p>You are now inside your wonderful git folder and you want to clone a repo from Git. That is also very easy. After making sure you have the rights to do this (if you're reading this, you should already have those rights), you type in Terminal the following:</p>
+
+				<p><pre class="language-bash"><code>git clone git://github.com/smashingmagazine/Paul-Boag-Book</code></pre></p>
+
+				<p>and hit enter. Then you wait for the download to be ready while stroking your geek-beard.</p>
+
+				<p class="thought"><a href="img/geekbeard.gif" title="Look at the image in full-size for all its beardy glory"><img src="img/geekbeard.gif" alt="Stroking my geek-beard. Awesome!" /></a></p>
+
+				<p><strong>Important Note</strong>: While typing please make sure you watch out for case-sensitivity. Otherwise things will go awry and we don't want that. Again! Always watch out for the exact name of a repo or you will end up with either nothing or something you did not want to have on your computer.</p>
+			</article>
+			<article id="4">
+				<h3>Down The Rabbit Hole</h3>
+
+				<p>You have successfully cloned a repo from Git to your computer. Hooray! You are already on a very good path to work with Git. Dive into the project directory:</p>
+
+				<p><pre class="language-bash"><code>cd Paul-Boag-Book</code></pre></p>
+
+				<p>Again, watch out for case-sensitivity or you will end up nowhere.</p>
+
+				<p>Go on and open the <code class="language-html">index.html</code> of the Paul-Boag-Book repo in your favorite editor and type away. Add something, delete something, change something and safe those changes! For example you could change the title to something to your own likes.</p>
+
+				<p>Back to the Terminal Batman! We made a change. May be we made a few or even many changes. May be we have a completely new version compared to the one you cloned from Git. Whatever it is, you now want to type:</p>
+
+				<p><pre class="language-bash"><code>git status</code></pre></p>
+
+				<p>The Terminal will now tell you what has changed in your local repo.</p>
+
+				<p>Like what you see? Good. Now, we will add those changes to the staging area by typing:</p>
+
+				<p><pre class="language-bash"><code>git add .</code></pre></p>
+
+				<p>and tap return. The dot at the end of this command means nothing else than <strong>ADD ALL THE THINGS</strong> that changed to the staging area. Check again with:</p>
+
+				<p><pre class="language-bash"><code>git status</code></pre></p>
+
+				<p>It is not a mandatory step to do this but helpful nonetheless as you can check what has been staged.</p>
+
+				<p>Now, we want to commit out changes to our local repo and give a message what we have changed so we can remember the next time we come back to it.</p>
+
+				<p><pre class="language-bash"><code>git commit -m "Your message goes here"</code></pre></p>
+
+				<p>This is what you want to type before pushing down the enter-button once more. The command tells this: "Commit all my changes and give a message with it. The message is between the quotation marks."</p>
+
+				<p>That's it. You made a almost complete circle of version control. Check with:</p>
+
+				<p><pre class="language-bash"><code>git status</code></pre></p>
+
+				<p>All things have been committed? If that is the case we move on to our final section of this little course.</p>
+			</article>
+			<article id="5">
+				<h3>The Pusher</h3>
+
+				<p>You've come this far! Wow. Give yourself a nice pat on the back, now. I'll wait for you.</p>
+
+				<p>The final step of working with Git is to push your changes to the repo at Github. Back to the terminal I say and you should type the following command:</p>
+
+				<p><pre class="language-bash"><code>git push -u origin master</code></pre></p>
+
+				<p>Hit enter and take a look at your repo at Github. Sure enough there's +1 Commit, now, in the history of the remote repository. You did it.</p>
+
+				<p>Now, what if someone else made a few changes to that repo after your committing and pushing and all? That's also as easy as falling off a log. <code>cd</code> to your repo on your computer, hit the following command:</p>
+
+				<p><pre class="language-bash"><code>git fetch git://github.com/smashingmagazine/Paul-Boag-Book</code></pre></p>
+
+				<p>Followed by the obligatory enter button.</p>
+
+				<p>Git will now check the differences between your repo and the one at Git. All new things, will then be downloaded to your computer. Typing:</p>
+
+				<p><pre class="language-bash"><code>git merge git://github.com/smashingmagazine/Paul-Boag-Book/master</code></pre></p>
+
+				<p>You just merged the changes with your repo.</p>
+
+				<p>Marvelous stuff it is. You learned how to clone a repo, how to check for changes, how to add changes to the staging area, commit them and finally push them to the remote repo at Git. Pretty impressing! And on top of that you now can keep your repo always up to date with recent changes committed by others, if you're on a team-project.</p>
+			</article>
+			<article id="6">
+
+				<h3>tl;dr</h3>
+
+				<p>Too long, didn't read. Alright, here is the very short commands only version of this course/cheatsheet, whatever you want to name it. Have fun, always double check and try to be consistent! Nuff said, here are the most needed commands:</p>
+
+				<p><pre class="language-bash"><code>git clone [alias]
+git status
+git add .
+git commit -m "Your message here"
+git push -u origin master
+git fetch [alias]
+git merge [alias]/[branch]</code></pre></p>
+
+				<p>For a complete overview of what is what and who is who check the <a href="http://gitref.org/index.html">Git Reference</a>!</p>
+
+			</article>
+		</section> <!-- End of Content -->
+	</main> <!-- End of main -->
+	<footer role="content-information" id="7">
+		<h4>Credits</h4>
+
+		<p>My name is Marco Kunz and I wrote this course for <a href="http://smashingmagazine.com">Smashing Magazine</a>. I learned all the things, which I'm passing on to you here, at <a href="https://github.com/">Github</a>, at the <a href="http://gitref.org/">Git Reference</a>, by watching <a href="http://youtu.be/24NGu1vGBiw">this video</a> and with the help from some of my <a href="https://twitter.com/fredericmaquin">fellow</a> <a href="http://chriscoyier.net/">developers</a> <a href="http://dbushell.com/">around</a> <a href="http://www.stuffandnonsense.co.uk/">the</a> <a href="http://boagworld.com/">world</a>.</p>
+
+		<p>I'm using the <a href="http://prismjs.com/">Prism Syntax Highlighter</a> by <a href="http://lea.verou.me/">Lea Verou</a> for this page.</p>
+
+		<p>During development I've been using <a href="http://gruntjs.com/">Grunt</a> with the following plugins:</p>
+
+		<ul class="chrork snort grunt">
+			<li><a href="https://github.com/yaniswang/grunt-htmlhint">htmlhint</a> by <a href="http://yaniswang.com/">yaniswang</a></li>
+			<li><a href="https://github.com/gruntjs/grunt-contrib-less">contrib-less</a></li>
+			<li><a href="https://github.com/nDmitry/grunt-autoprefixer">autoprefixer</a> by <a href="https://twitter.com/nDmitry">nDmitry</a></li>
+			<li><a href="https://github.com/gruntjs/grunt-contrib-cssmin">contrib-cssmin</a></li>
+			<li><a href="https://github.com/gruntjs/grunt-contrib-imagemin">contrib-imagemin</a></li>
+			<li><a href="https://github.com/gruntjs/grunt-contrib-watch">contrib-watch</a></li>
+		</ul>
+
+		<p>The font being used coming from Google is <a href="https://www.google.com/fonts/specimen/Raleway">Raleway</a> originally designed by <a href="http://blog.matt.cc/">Matt McInerney</a> and then expanded by <a href="http://www.impallari.com/">Pablo Impallari</a> and <a href="http://www.rfuenzalida.com/">Rodrigo Fuenzalida</a>. The original font coming in thin weight only can be seen at <a href="https://www.theleagueofmoveabletype.com/raleway">this website</a>.</p>
+
+		<p>The animated gif used comes a long way from this <a href="http://www.reddit.com/r/Cinemagraphs/comments/12988g/beardgif/">reddit thread</a>.</p>
+	</footer>
+	<a href="#top">I'll be taking the elevator!<br /><span>∆</span></a>
+	<script src="js/prism.js"></script>
+	<script type='text/javascript'>if(navigator.userAgent.match(/IEMobile\/10\.0/)){var msViewportStyle=document.createElement("style");msViewportStyle.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}"));document.getElementsByTagName("head")[0].appendChild(msViewportStyle)};</script>
+</body>
+</html>

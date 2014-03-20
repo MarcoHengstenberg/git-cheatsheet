@@ -1,0 +1,18 @@
+{
+	"name" : "GitCheatSheet",
+	"version" : "0.1.0",
+	"description": "An explanation on how to use Github for Smashing Developers",
+	"author" : "Marco Kunz",
+	"private" : "true",
+
+	"devDependencies" : {
+		"grunt" : "~0.4.0",
+		"grunt-htmlhint": "*",
+		"grunt-contrib-less" : "*",
+		"grunt-autoprefixer" : "*",
+		"grunt-contrib-cssmin" : "*",
+		"grunt-contrib-imagemin": "*",
+		"grunt-contrib-watch" : "*",
+		"matchdep" : "*"
+	}
+}
