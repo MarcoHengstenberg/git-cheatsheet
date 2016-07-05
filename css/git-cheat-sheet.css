@@ -100,10 +100,10 @@ a {
     noone dies using Firefox or Opera or whatever you are using.
   */
   border-bottom: .08em solid transparent;
-  color: #00b0ba;
+  color: darkgreen;
   background: transparent;
   -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+          transition: all .3s ease;
 }
 a:hover,
 a:focus,
@@ -131,10 +131,10 @@ img {
   color: #fff;
 }
 abbr[title] {
-  border-bottom: 0.08em dotted #00b0ba;
+  border-bottom: 0.08em dotted darkgreen;
 }
 abbr:hover {
-  color: #00b0ba;
+  color: darkgreen;
 }
 .clearfix:before,
 .clearfix:after {
@@ -192,11 +192,6 @@ body {
   color: #353f3a;
   width: 90%;
   margin: 0 auto;
-  border: 0.25em solid #e53b2c;
-  border-left: 0;
-  border-right: 0;
-  -webkit-box-shadow: 0 0 0.625em 0.08em rgba(0, 0, 0, 0.05);
-  box-shadow: 0 0 0.625em 0.08em rgba(0, 0, 0, 0.05);
 }
 header,
 section,
@@ -223,12 +218,9 @@ h2 {
 article {
   padding: 1em 0 3em;
 }
-h3 {
-  font-size: 1.618em;
-  margin-bottom: 0.618em;
-}
+h3,
 h4 {
-  font-size: 3.236em;
+  font-size: 1.618em;
   margin-bottom: 0.618em;
 }
 p {
@@ -237,40 +229,18 @@ p {
   margin-bottom: 0.618em;
 }
 .toc,
-.repos,
-.grunt {
+.repos {
+  color: #005300;
   font-size: 1.25em;
   padding-left: 1.5em;
 }
 .toc li,
-.repos li,
-.grunt li {
+.repos li {
   line-height: 2em;
 }
-.repos,
-.grunt {
+.repos {
   list-style-type: disc;
   margin-bottom: 1.618em;
-}
-a[href="#top"] {
-  display: block;
-  text-align: center;
-  padding: 1.618em 1.618em 3.236em;
-}
-a[href="#top"] span {
-  font-size: 2em;
-  display: block;
-  position: relative;
-  top: 0;
-  text-align: center;
-  -webkit-transition: all ease-in 3s;
-  transition: all ease-in 3s;
-}
-a[href="#top"]:hover span,
-a[href="#top"]:focus span,
-a[href="#top"]:active span {
-  top: -48.54em;
-  font-size: 4em;
 }
 /**
  * prism.js Twilight theme
@@ -287,9 +257,9 @@ pre[class*="language-"] {
   word-spacing: normal;
   word-break: normal;
   -moz-tab-size: 4;
+  -o-tab-size: 4;
   tab-size: 4;
   -webkit-hyphens: none;
-  -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
 }
@@ -304,8 +274,6 @@ pre[class*="language-"] {
   border-radius: .5em;
   border: 0.3em solid #545454;
   /* #282A2B */
-  -webkit-box-shadow: 1px 1px .5em black inset;
-  /* #282A2B */
   box-shadow: 1px 1px .5em black inset;
   margin: .5em 0;
   overflow: auto;
@@ -318,6 +286,11 @@ pre[class*="language-"]::-moz-selection {
 }
 pre[class*="language-"]::selection {
   /* Safari */
+  background: #27292a;
+  /* #282A2B */
+}
+pre[class*="language-"]::-moz-selection {
+  /* Firefox */
   background: #27292a;
   /* #282A2B */
 }
@@ -346,9 +319,7 @@ code[class*="language-"] ::selection {
   border-radius: .3em;
   border: 0.13em solid #545454;
   /* #545454 */
-  -webkit-box-shadow: 1px 1px 0.3em -0.1em #000000 inset;
-  /* #545454 */
-  box-shadow: 1px 1px 0.3em -0.1em #000000 inset;
+  box-shadow: 1px 1px 0.3em -0.1em black inset;
   padding: .15em .2em .05em;
 }
 .token.comment,
@@ -423,14 +394,8 @@ pre[data-line] {
   z-index: 1;
 }
 .line-highlight {
-  /* #545454 */
   background: -webkit-linear-gradient(left, rgba(84, 84, 84, 0.1) 70%, rgba(84, 84, 84, 0));
-  /* #545454 */
-  background: rgba(84, 84, 84, 0.25);
-  /* #545454 */
-  background: -webkit-gradient(linear, left top, right top, from(rgba(84, 84, 84, 0.1)), to(rgba(84, 84, 84, 0)));
-  /* #545454 */
-  background: linear-gradient(left, rgba(84, 84, 84, 0.1) 70%, rgba(84, 84, 84, 0));
+  background: linear-gradient(to right, rgba(84, 84, 84, 0.1) 70%, rgba(84, 84, 84, 0));
   /* #545454 */
   border-bottom: 1px dashed #545454;
   /* #545454 */
@@ -452,7 +417,6 @@ pre[data-line] {
   background-color: #8794a6;
   /* #8794A6 */
   border-radius: 999px;
-  -webkit-box-shadow: 0 1px white;
   box-shadow: 0 1px white;
   color: #f5f2f0;
   /* #F5F2F0 */
@@ -512,8 +476,7 @@ pre[data-line] {
     float: right;
     width: 32.8%;
     padding: 1em;
-    border-bottom: 0.08em solid #e53b2c;
+    border: 0.08em solid #e53b2c;
     margin-left: 1em;
-    color: #e53b2c;
   }
 }
