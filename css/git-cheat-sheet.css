@@ -116,7 +116,10 @@ a:active {
   outline: 0;
 }
 ul {
-  list-style-type: none;
+  font-size: 1.125em;
+  line-height: 1.55;
+  padding-left: 1.25em;
+  margin-bottom: 1em;
 }
 img {
   max-width: 100%;
@@ -225,22 +228,22 @@ h4 {
 }
 p {
   font-size: 1.125em;
-  line-height: 1.5em;
+  line-height: 1.55;
   margin-bottom: 0.618em;
 }
-.toc,
-.repos {
+.toc {
   color: #005300;
   font-size: 1.25em;
   padding-left: 1.5em;
 }
-.toc li,
-.repos li {
-  line-height: 2em;
+.toc li {
+  line-height: 2;
 }
-.repos {
-  list-style-type: disc;
-  margin-bottom: 1.618em;
+[href="#top"] {
+  font-size: 1.5em;
+  display: block;
+  text-align: center;
+  padding-bottom: 3em;
 }
 /**
  * prism.js Twilight theme
