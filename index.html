@@ -102,9 +102,9 @@
 
 				<p>You are now inside your wonderful git folder and you want to clone a repo from Git. That is also very easy. After making sure you have the rights to do this (if you're reading this, you should already have those rights), you type in Terminal the following:</p>
 
-				<p><pre class="language-bash"><code>git clone git://github.com/smashingmagazine/Paul-Boag-Book</code></pre></p>
+				<p><pre class="language-bash"><code>git clone git@github.com:smashingmagazine/smashing.cat.git</code></pre></p>
 
-				<p>and hit enter. Then you wait for the download to be ready while stroking your geek-beard.</p>
+				<p>and hit enter. Then you wait for the download to be ready while stroking your geek-beard. If you haven't got a geek-beard yet, don't fear, it will grow automatically – in minutes.</p>
 
 				<p class="thought"><a href="img/geekbeard.gif" title="Look at the image in full-size for all its beardy glory"><img src="img/geekbeard.gif" alt="Stroking my geek-beard. Awesome!" /></a></p>
 
@@ -113,13 +113,13 @@
 			<article id="4">
 				<h3>Down The Rabbit Hole</h3>
 
-				<p>You have successfully cloned a repo from Git to your computer. Hooray! You are already on a very good path to work with Git. Dive into the project directory:</p>
+				<p>You have successfully cloned a repo to your computer. Hooray! You are already on a very good path to work with Git. Dive into the project directory:</p>
 
-				<p><pre class="language-bash"><code>cd Paul-Boag-Book</code></pre></p>
+				<p><pre class="language-bash"><code>cd smashing.cat</code></pre></p>
 
 				<p>Again, watch out for case-sensitivity or you will end up nowhere.</p>
 
-				<p>Go on and open the <code class="language-html">index.html</code> of the Paul-Boag-Book repo in your favorite editor and type away. Add something, delete something, change something and safe those changes! For example you could change the title to something to your own likes.</p>
+				<p>Go on and open the <code class="language-html">index.html</code> of the smashing.cat repo in your favorite editor and type away. Add something, delete something, change something and safe those changes! For example you could change the title to something to your own likes.</p>
 
 				<p>Back to the Terminal Batman! We made a change. May be we made a few or even many changes. May be we have a completely new version compared to the one you cloned from Git. Whatever it is, you now want to type:</p>
 
@@ -143,7 +143,7 @@
 
 				<p>This is what you want to type before pushing down the enter-button once more. The command tells this: "Commit all my changes and give a message with it. The message is between the quotation marks."</p>
 
-				<p>That's it. You made a almost complete circle of version control. Check with:</p>
+				<p>That's it. You made a complete circle of version control. Check with:</p>
 
 				<p><pre class="language-bash"><code>git status</code></pre></p>
 
@@ -152,7 +152,7 @@
 			<article id="5">
 				<h3>The Pusher</h3>
 
-				<p>You've come this far! Wow. Give yourself a nice pat on the back, now. I'll wait for you.</p>
+				<p>You've come this far! Wow. Give yourself a nice pat on the back, now.</p>
 
 				<p>The final step of working with Git is to push your changes to the repo at Github. Back to the terminal I say and you should type the following command:</p>
 
@@ -162,13 +162,13 @@
 
 				<p>Now, what if someone else made a few changes to that repo after your committing and pushing and all? That's also as easy as falling off a log. <code>cd</code> to your repo on your computer, hit the following command:</p>
 
-				<p><pre class="language-bash"><code>git fetch git://github.com/smashingmagazine/Paul-Boag-Book</code></pre></p>
+				<p><pre class="language-bash"><code>git fetch git://github.com/smashingmagazine/smashing.cat</code></pre></p>
 
 				<p>Followed by the obligatory enter button.</p>
 
-				<p>Git will now check the differences between your repo and the one at Git. All new things, will then be downloaded to your computer. Typing:</p>
+				<p>Git will now check the differences between your repo and the one at Git. All new things, will then be downloaded to your computer. Type:</p>
 
-				<p><pre class="language-bash"><code>git merge git://github.com/smashingmagazine/Paul-Boag-Book/master</code></pre></p>
+				<p><pre class="language-bash"><code>git merge git://github.com/smashingmagazine/smashing.cat/master</code></pre></p>
 
 				<p>You just merged the changes with your repo.</p>
 
@@ -196,7 +196,7 @@ git merge [alias]/[branch]</code></pre></p>
 	<footer role="content-information" id="7">
 		<h4>Credits</h4>
 
-		<p>My name is Marco Kunz and I wrote this course for <a href="http://smashingmagazine.com">Smashing Magazine</a>. I learned all the things, which I'm passing on to you here, at <a href="https://github.com/">Github</a>, at the <a href="http://gitref.org/">Git Reference</a>, by watching <a href="http://youtu.be/24NGu1vGBiw">this video</a> and with the help from some of my <a href="https://twitter.com/fredericmaquin">fellow</a> <a href="http://chriscoyier.net/">developers</a> <a href="http://dbushell.com/">around</a> <a href="http://www.stuffandnonsense.co.uk/">the</a> <a href="http://boagworld.com/">world</a>.</p>
+		<p>My name is Marco Hengstenberg and I wrote this little course for <a href="http://smashingmagazine.com">Smashing Magazine</a>. I learned all the things, which I'm passing on to you here, at <a href="https://github.com/">Github</a>, at the <a href="http://gitref.org/">Git Reference</a>, by watching <a href="http://youtu.be/24NGu1vGBiw">this video</a> and with the help from some of my <a href="https://twitter.com/ephread">fellow</a> <a href="http://chriscoyier.net/">developers</a> <a href="http://dbushell.com/">around</a> <a href="http://www.stuffandnonsense.co.uk/">the</a> <a href="http://boagworld.com/">world</a>.</p>
 
 		<p>I'm using the <a href="http://prismjs.com/">Prism Syntax Highlighter</a> by <a href="http://lea.verou.me/">Lea Verou</a> for this page.</p>
 
